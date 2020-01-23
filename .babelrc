@@ -1,0 +1,16 @@
+{
+  "plugins": [["snowpack/assets/babel-plugin.js", {}]],
+  "presets": [
+    "@vue/babel-preset-jsx",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        },
+        "modules": "false",
+        "useBuiltIns": false
+      }
+    ]
+  ]
+}

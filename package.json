@@ -1,0 +1,30 @@
+{
+  "name": "snowpack-vue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn run babel & yarn run serve",
+    "serve": "servor dist index.html 8080 --reload",
+    "babel": "babel src/ --out-dir dist --watch --verbose",
+    "snowpack:dev": "snowpack --dest dist/web_modules --clean",
+    "snowpack:prod": "yarn run snowpack:dev --optimize"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+    "@vue/babel-preset-jsx": "^1.1.2",
+    "servor": "^3.1.0",
+    "snowpack": "^1.1.0"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "vue/dist/vue.esm.browser.js"
+    ]
+  }
+}
