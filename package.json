@@ -8,7 +8,8 @@
     "serve": "servor dist index.html 8080 --reload",
     "babel": "babel src/ --out-dir dist --watch --verbose",
     "snowpack:dev": "snowpack --dest dist/web_modules --clean",
-    "snowpack:prod": "yarn run snowpack:dev --optimize"
+    "snowpack:prod": "yarn run snowpack:dev --optimize",
+    "build": "babel src/ --out-dir dist && snowpack:prod"
   },
   "dependencies": {
     "vue": "^2.6.11"
